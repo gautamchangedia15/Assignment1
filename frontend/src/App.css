@@ -1,0 +1,108 @@
+body{
+    margin:0;
+    background-color: #223322;
+    color:white;
+    font-family: 'Arial', sans-serif;
+    display:flex;
+    justify-content: center;
+}
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap:30px;
+}
+
+.search-box > h1{
+    font-size: 22px;
+}
+
+.dropbtn, .dropbtn >select {
+    width: 100%;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.dropbtn > p{
+    margin: 0;
+    padding: 5px;
+}
+
+
+button{
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+/* for flight card */
+
+.data-box{
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    background-color: #024202;
+    color: rgb(128, 122, 122);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .route {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .miles {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    font-size: 35px;
+    margin-top: 30px;
+  }
+  
+  .miles-data{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .miles-data > p{
+    margin: 2px;
+    color:white
+  }
+  .subtext {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .figures{
+    margin-left: 20px;
+  }
+  .abc {
+    background-color: red;
+  }
