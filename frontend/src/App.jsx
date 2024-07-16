@@ -24,6 +24,7 @@ function App() {
     setCabinClass(event.target.value);
   };
 
+
   const headers = {
     accept: "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9,hi;q=0.8",
@@ -92,11 +93,12 @@ function App() {
           <label style={{backgroundColor:"rgb(255,255,255,0.05)"}} className="dropdown-label">Class Selection</label>
           <select
             className="dropdown"
+            onChange={handleCabinClassChange}
             style={{ backgroundColor: "rgb(255,255,255,0.05)" }}
           >
-            <option style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>abc</option>
-            <option style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>abc</option>
-            <option style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>abc</option>
+            <option value="economy" style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>Economy</option>
+            <option value="business" style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>Business</option>
+            <option value="first" style={{ opacity: "100%", color: "white", backgroundColor:"#333333"}}>First</option>
           </select>
         </div>
 
