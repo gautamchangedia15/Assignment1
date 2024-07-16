@@ -60,9 +60,8 @@ function App() {
 
   const handleClick = (e) => {
     axios
-      .post("http://localhost:3000/getFlights", json_data, { headers })
+      .post("/getFlights", json_data, { headers })
       .then((response) => {
-        console.log("GetFligts: ", response);
         setData(response.data);
         setError("");
       })
