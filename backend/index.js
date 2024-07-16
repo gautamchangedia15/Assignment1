@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
+import { log } from "console";
 dotenv.config();
 
 const app = express();
@@ -10,6 +11,9 @@ const __dirname = path.resolve();
 
 
 app.use(cors());
+app.use(express.static(path.join(__dirname,"./frontend/dist")));
+
+
 const data = [
   {
     min_business_miles: null,
@@ -31,7 +35,6 @@ const data = [
   },
 ];
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.post("/getFlights", (req, res) => {
   try {
@@ -43,7 +46,7 @@ app.post("/getFlights", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 app.listen(PORT, () => {
